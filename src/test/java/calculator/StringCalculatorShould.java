@@ -36,4 +36,9 @@ class StringCalculatorShould {
    	assertEquals(15, stringCalculator.add("1,2,3,4,5"));
    }
    
+   // below method will handle new line between numbers 
+   @Test
+   public void testNewLine()  {
+   	assertEquals(6, stringCalculator.add("1\n2,3"));
+   }
 }
