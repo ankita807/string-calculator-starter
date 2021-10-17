@@ -41,4 +41,21 @@ class StringCalculatorShould {
    public void testNewLine()  {
    	assertEquals(6, stringCalculator.add("1\n2,3"));
    }
+   
+   // below method will check if the given number is negative
+   public void checkNegativeNumber() {
+   	try {
+			stringCalculator.add("-1");
+		} catch (Exception e) {
+			assertEquals(e.getMessage(), "negatives not allowed -1 ");
+		}
+   	try {
+			stringCalculator.add("-1,-3");
+		} catch (Exception e) {
+			assertEquals(e.getMessage(), "negatives not allowed -1,-3 ");
+		}
+   }
+   
+   
+   
 }
