@@ -30,4 +30,10 @@ class StringCalculatorShould {
    	assertEquals(3,stringCalculator.add("1,2"));
    }
    
+   // below method will take unknown numbers of arguments and returns the sum 
+   @Test
+   public void unknownNumbersOfArgs() {
+   	assertEquals(15, stringCalculator.add("1,2,3,4,5"));
+   }
+   
 }
