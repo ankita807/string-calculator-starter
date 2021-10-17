@@ -46,16 +46,22 @@ class StringCalculatorShould {
    public void checkNegativeNumber() {
    	try {
 			stringCalculator.add("-1");
-		} catch (Exception e) {
-			assertEquals(e.getMessage(), "negatives not allowed -1 ");
-		}
-   	try {
 			stringCalculator.add("-1,-3");
 		} catch (Exception e) {
-			assertEquals(e.getMessage(), "negatives not allowed -1,-3 ");
-		}
+			assertEquals(e.getMessage(), "negatives not allowed -1 ");
+			}
    }
+   public void ignoreNumberGreaterThan1000() {
+	   try {
+	   assertEquals(20, stringCalculator.add("10,100,1000"));
+	   }
+	   catch (Exception e) {
+			assertEquals(e.getMessage(), "Not Allowed Number greater than 1000 ");
+			}
+		 
+	   }
+   
+ }
    
    
-   
-}
+
